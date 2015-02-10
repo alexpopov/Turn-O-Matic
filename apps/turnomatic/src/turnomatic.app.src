@@ -1,0 +1,12 @@
+{application, turnomatic,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { turnomatic_app, []}},
+  {env, []}
+ ]}.
