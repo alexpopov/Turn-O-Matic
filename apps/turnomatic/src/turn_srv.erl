@@ -55,7 +55,7 @@ handle_call(serve_next, _From, State) ->
 		true  ->
 			FirstInLine = lists:last(LineUp),
 			io:format("Process: ~p you can go to an open window~n", [FirstInLine]),
-			{reply, {ok, Status}, State#state{now_serving = NowServing + 1, line_up = lists:droplast(LineUp)}};
+			{reply, {ok, State}, State#state{now_serving = NowServing + 1, line_up = lists:droplast(LineUp)}};
 		false ->
 			io:format("Error: nobody to serve!!n", []),
 			{reply, {no_line, State}, State}
